@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:59:03 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/29 14:43:37 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/10/29 16:13:56 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ size_t	ft_strlen(const char *str); //ok
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size); //ok
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size); //ok
 
-char	*ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c); //ok
 
-char	*ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c); //ok
 
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 

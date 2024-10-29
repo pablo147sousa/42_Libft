@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 15:30:13 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/29 16:32:07 by pmoreira         ###   ########.fr       */
+/*   Created: 2024/10/29 16:14:12 by pmoreira          #+#    #+#             */
+/*   Updated: 2024/10/29 16:37:25 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		i;
+	size_t	i;
+	size_t	j;
+	size_t	sz;
 	char	*str;
 
-	str = (char *) s;
 	i = 0;
-	while (str[i] != 0)
+	j = 0;
+	sz = ft_strlen(little);
+	str = (char *) big;
+	if (sz == 0)
+		return (&str[i]);
+	while (str[i] != 0 && i < len)
 	{
-		if (str[i] == c)
-			return (&str[i]);
+		while (str[i] == little[j])
+		{
+			i++;
+			j++;
+		}
+		if (j == sz)
+			return (&str[i - j]);
 		i++;
 	}
 	return (0);
