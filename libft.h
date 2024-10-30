@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:59:03 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/29 16:13:56 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:40:20 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ void	*ft_memchr(const void *s, int c, size_t n); //ok
 
 void	*ft_calloc(size_t nmemb, size_t size); //ok
 
+void	*ft_memmove(void *dest, const void *src, size_t n);
+
 size_t	ft_strlen(const char *str); //ok
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size); //ok
@@ -57,9 +59,9 @@ char	*ft_strchr(const char *s, int c); //ok
 
 char	*ft_strrchr(const char *s, int c); //ok
 
-char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len); //ok
 
-char	*ft_strdup(const char *s);
+char	*ft_strdup(const char *s); //ok
 
 //-----------------------------------------------------------
 

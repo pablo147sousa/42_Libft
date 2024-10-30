@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 10:26:42 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/29 13:29:43 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/10/30 13:38:41 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,20 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 /*
 #include <string.h>
 
-int main()
-{
-	char	src[] = "nnot_ok";
-	char	src2[] = "nnot_ok";
-	char	*cpy;
-	//int		size;
+int main() {
+	//char str[] = "123456";
+	char sResult[] = {67, 68, 67, 68, 69, 0, 45};
 
-	cpy = "itisei";
-	//size = sizeof(src) / sizeof(char);
-	printf ("Result: %s\n",(char *) ft_memcpy(src, cpy, 4));
-	//size = sizeof(src2) / sizeof(char);
-	printf ("Expected: %s\n",(char *) memcpy(src2, cpy, 4));
+	// Move os 3 primeiros caracteres para frente em uma posição
+	ft_memcpy(sResult + 1, sResult, 3);
+
+	printf("Result: %s\n", sResult);  // Saída esperada: "aabdef"
+	char str2[] = {67, 68, 67, 68, 69, 0, 45};
+
+	// Move os 3 primeiros caracteres para frente em uma posição
+	memmove(str2 + 1, str2, 3);
+
+	printf("Expected: %s\n", str2);  // Saída esperada: "aabdef"
 	return 0;
 }
 */
