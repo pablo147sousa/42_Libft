@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:34:40 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/29 13:21:31 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/10/30 14:30:14 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	str = (unsigned char *) s;
 	cbyte = (unsigned char ) c;
-	while (str[i] != 0 && i < n)
+	while (i < n)
 	{
-		if (str[i] == cbyte)
+		if (str[i] == (unsigned char ) c)
 			return (&str[i]);
 		i++;
 	}
@@ -42,7 +42,7 @@ int main()
 	char	letter;
 	//int		size;
 
-	letter = 97;
+	letter = 's';
 	//size = sizeof(src) / sizeof(char);
 	printf ("Result: %s\n",(char *) ft_memchr(src, letter, 3));
 	//size = sizeof(src) / sizeof(char);
