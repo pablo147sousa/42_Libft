@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 13:48:23 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/29 15:42:44 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:02:39 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	if (size <= 0)
-		return (0);
+		return (ft_strlen(src));
 	while ((src[i] != 0) && i < size - 1)
 	{
 		dst[i] = src[i];
