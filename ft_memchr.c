@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:34:40 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/30 14:30:14 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:25:55 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	cbyte = (unsigned char ) c;
 	while (i < n)
 	{
-		if (str[i] == (unsigned char ) c)
+		if (str[i] == cbyte)
 			return (&str[i]);
 		i++;
 	}
