@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:14:12 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/29 16:37:25 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:05:18 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	sz = ft_strlen(little);
 	str = (char *) big;
 	if (sz == 0)
-		return (&str[i]);
+		return (str);
 	while (str[i] != 0 && i < len)
 	{
-		while (str[i] == little[j])
+		j = 0;
+		while (str[i + j] == little[j] && (i + j) < len)
 		{
-			i++;
 			j++;
+			if (little[j] == 0)
+				return (&str[i]);
 		}
-		if (j == sz)
-			return (&str[i - j]);
 		i++;
 	}
 	return (0);
