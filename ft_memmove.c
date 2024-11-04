@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:40:48 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/30 13:49:05 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/04 11:31:49 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*dt;
 	const unsigned char	*sc;
-	size_t				i;
 
 	if (dest <= src)
 		return (ft_memcpy(dest, src, n));
