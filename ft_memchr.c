@@ -6,11 +6,10 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:34:40 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/10/31 11:25:55 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/04 11:39:00 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n);

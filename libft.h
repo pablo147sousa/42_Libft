@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:59:03 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/04 09:55:34 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/04 11:39:37 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len); //ok
 
 char	*ft_strdup(const char *s); //ok
 
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len); //ok
 
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char const *s1, char const *s2); //ok
+
+char	*ft_strtrim(char const *s1, char const *set);
 
 //-----------------------------------------------------------
 
