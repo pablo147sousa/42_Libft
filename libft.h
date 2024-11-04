@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:59:03 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/04 16:17:08 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:35:31 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	*ft_memchr(const void *s, int c, size_t n); //ok
 
 void	*ft_calloc(size_t nmemb, size_t size); //ok
 
-void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n); //ok
 
 size_t	ft_strlen(const char *str); //ok
 
