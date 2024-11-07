@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:38:44 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/07 14:28:40 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:32:39 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int		ft_add_word(char **matrix, const char *start, const char *end);
 static char		**ft_free(char **matrix, int index);
 static char		**ft_alloc_matrix(char const *s, char c);
 
-static char **ft_alloc_matrix(char const *s, char c)
+static char	**ft_alloc_matrix(char const *s, char c)
 {
 	char	**alloc;
 	int		size;
@@ -29,7 +29,7 @@ static char **ft_alloc_matrix(char const *s, char c)
 			s++;
 		if (*s)
 			size++;
-		while(*s != c && *s)
+		while (*s != c && *s)
 			s++;
 	}
 	alloc = (char **)malloc((size + 1) * sizeof(char *));
@@ -55,7 +55,7 @@ static int	ft_add_word(char **matrix, const char *start, const char *end)
 	word = (char *)malloc((end - start + 1) * sizeof(char));
 	if (word == 0)
 		return (0);
-	while(start < end)
+	while (start < end)
 	{
 		word[i++] = *start;
 		start++;

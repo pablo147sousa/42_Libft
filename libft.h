@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:59:03 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/04 16:35:31 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:32:00 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,9 @@ char	*ft_strjoin(char const *s1, char const *s2); //ok
 
 char	*ft_strtrim(char const *s1, char const *set); //ok
 
-char	**ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c); //ok
+
+char	*ft_itoa(int n);
 
 //-----------------------------------------------------------
 
