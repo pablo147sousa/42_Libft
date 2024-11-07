@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:59:03 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/07 16:48:17 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:50:14 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *)); //ok
 
 void	ft_putchar_fd(char c, int fd); //ok
 
-void	ft_putstr_fd(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd); //ok
+
+void	ft_putendl_fd(char *s, int fd);
 
 size_t	ft_strlen(const char *str); //ok
 
