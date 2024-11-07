@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:38:44 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/07 13:59:31 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:28:40 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,16 @@ static char **ft_alloc_matrix(char const *s, char c)
 {
 	char	**alloc;
 	int		size;
-	int		i;
 
-	i = 1;
 	size = 0;
-	if (s[0] != 0 && s[0] != c)
-		size++;
-	while (s[i] != 0)
+	while (*s)
 	{
-		if (s[i] != c && s[i - 1] == c)
+		while (*s == c && *s)
+			s++;
+		if (*s)
 			size++;
-		i++;
+		while(*s != c && *s)
+			s++;
 	}
 	alloc = (char **)malloc((size + 1) * sizeof(char *));
 	if (alloc == 0)
@@ -94,7 +93,7 @@ char	**ft_split(char const *s, char c)
 	matrix[index] = 0;
 	return (matrix);
 }
-
+/* 
 int	main()
 {
 	int		i;
@@ -111,3 +110,4 @@ int	main()
 	ft_free(matrix,i);
 	return (0);
 }
+ */
