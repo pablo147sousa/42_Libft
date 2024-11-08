@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:59:03 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/08 15:37:15 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:42:39 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,9 @@ typedef struct s_list
 
 t_list	*ft_lstnew(void *content); //ok
 
-t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstlast(t_list *lst); //ok
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 int		ft_lstsize(t_list *lst); //ok
 
