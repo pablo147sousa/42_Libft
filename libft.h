@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:59:03 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/08 09:57:07 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/08 10:27:15 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	ft_putstr_fd(char *s, int fd); //ok
 
 void	ft_putendl_fd(char *s, int fd); //ok
 
-void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd); //ok
 
 size_t	ft_strlen(const char *str); //ok
 
@@ -85,6 +85,14 @@ char	*ft_itoa(int n); //ok
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); //ok
 
-//-----------------------------------------------------------
+//--------------------------BONUS----------------------------
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
+t_list	*ft_lstnew(void *content);
 
 #endif

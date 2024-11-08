@@ -8,9 +8,13 @@ ft_memmove.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c\
 ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 ft_putnbr_fd.c
 
+BONUS_SOURCE = ft_lstnew.c 
+
 H_SOURCE = ./
 
 OBJ = $(C_SOURCE:.c=.o)
+
+OBJ_BONUS = $(BONUS_SOURCE:.c=.o)
 
 CC = cc
 
@@ -26,10 +30,14 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CC_FLAGS) -I $(H_SOURCE) -c $< -o $@
 
+bonus: $(OBJ_BONUS)
+	ar rcs $(NAME) $^
+
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
