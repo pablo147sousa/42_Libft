@@ -17,11 +17,11 @@ OBJ = $(C_SOURCE:.c=.o)
 
 OBJ_BONUS = $(BONUS_SOURCE:.c=.o)
 
-CC = cc
+CC = @cc
 
 CC_FLAGS = -Wall -Werror -Wextra
 
-RM = rm -rf
+RM = @rm -rf
 
 all: $(NAME)
 
@@ -33,9 +33,10 @@ $(NAME): $(OBJ)
 
 bonus: $(OBJ_BONUS)
 	ar rcs $(NAME) $^
+	@touch bonus
 
 clean:
-	$(RM) $(OBJ) $(OBJ_BONUS)
+	$(RM) $(OBJ) $(OBJ_BONUS) bonus
 
 fclean: clean
 	$(RM) $(NAME)
