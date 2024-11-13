@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:41:39 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/08 16:46:25 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:04:55 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,49 +14,23 @@
 #include <stdlib.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-t_list	*ft_lstfree(t_list *lst,void (*del)(void *));
-
-t_list	*ft_lstfree(t_list *lst,void (*del)(void *))
-{
-	t_list *temp;
-
-	if (lst == 0)
-		return;
-	else
-	{
-		temp = lst;
-		while ((lst)->next != 0)
-		{
-			del((lst)->content);
-			temp = (lst)->next;
-			free((lst));
-			(lst) = temp;
-		}
-		del((lst)->content);
-		free(lst);
-	}
-	lst = 0;
-}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*output;
 	t_list	*temp;
 
-	if (lst == 0)
-		return (0);
-	output = 0;
-	while (lst->next != 0)
+	output = NULL;
+	while (lst)
 	{
-		temp = ft_lstnew(f(temp->content));
+		temp = ft_lstnew(f(lst->content));
 		if (temp == 0)
 		{
-			ft_lstfree()
-			
+			ft_lstclear(&output, del);
+			return (NULL);
 		}
-			
-		output->next = temp->next;
-		
+		ft_lstadd_back(&output, temp);
+		lst = lst->next;
 	}
-	
+	return (output);
 }
