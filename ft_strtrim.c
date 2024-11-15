@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:52:59 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/04 16:17:35 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:57:23 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	min;
 	int				i;
 
+	if (s1 == 0)
+		return (0);
 	min = ft_count(s1, set, 1);
 	max = ft_count(s1, set, -1) + 1;
 	if (max == 0)
@@ -58,14 +60,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (output);
 }
 /*
-int main()
+int	main(void)
 {
-	char str1[] = "   xxx   xxx";
-	char set[] = " x";
+	char	*result;
 
-	printf("Original: '%s'\n", str1);
-	printf("Trimmed: '%s'\n\n", ft_strtrim(str1, set));
+	// Test case 6: NULL input
+	result = ft_strtrim(NULL, " ");
+	printf("Test 6: %s\n", result ? result : "NULL");
+	free(result);
 
-	return 0;
+	return (0);
 }
 */
