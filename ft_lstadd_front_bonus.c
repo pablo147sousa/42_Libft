@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 14:29:43 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/08 14:49:01 by pmoreira         ###   ########.fr       */
+/*   Created: 2024/11/15 17:10:11 by pmoreira          #+#    #+#             */
+/*   Updated: 2024/11/15 17:10:14 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	del(lst->content);
-	free(lst);
+	new->next = *lst;
+	*lst = new;
 }
+/* 
+int main()
+{
+	t_list	**lst;
+	t_list	*node;
+	t_list	*new;
+
+	node = ft_lstnew((void *) 42);
+	new = ft_lstnew((void *) 24);
+	lst = &node;
+	ft_lstadd_front(lst, new);
+	printf("%d", (*lst == new));
+	return (0);
+}
+ */

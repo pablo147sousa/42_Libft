@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 11:12:47 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/08 11:52:43 by pmoreira         ###   ########.fr       */
+/*   Created: 2024/11/15 17:08:25 by pmoreira          #+#    #+#             */
+/*   Updated: 2024/11/15 17:08:28 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new);
+int	ft_lstsize(t_list *lst);
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	ft_lstsize(t_list *lst)
 {
-	new->next = *lst;
-	*lst = new;
+	int	size;
+
+	if (lst == 0)
+		return (0);
+	size = 1;
+	while (lst->next != 0)
+	{
+		size++;
+		lst = lst->next;
+	}
+	return (size);
 }
 /* 
 int main()
 {
-	t_list	**lst;
-	t_list	*node;
-	t_list	*new;
-
-	node = ft_lstnew((void *) 42);
-	new = ft_lstnew((void *) 24);
-	lst = &node;
-	ft_lstadd_front(lst, new);
-	printf("%d", (*lst == new));
+	t_list *l = NULL;
+	printf("%d\n",ft_lstsize(l));
+	ft_lstadd_front(&l, ft_lstnew((void *)1));
+	printf("%d\n",ft_lstsize(l));
+	ft_lstadd_front(&l, ft_lstnew((void *)2));
+	printf("%d\n",ft_lstsize(l));
 	return (0);
 }
  */

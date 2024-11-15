@@ -1,42 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 11:55:29 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/08 12:26:53 by pmoreira         ###   ########.fr       */
+/*   Created: 2024/11/15 17:07:52 by pmoreira          #+#    #+#             */
+/*   Updated: 2024/11/15 17:07:54 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int	ft_lstsize(t_list *lst);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	int	size;
-
-	if (lst == 0)
-		return (0);
-	size = 1;
-	while (lst->next != 0)
-	{
-		size++;
-		lst = lst->next;
-	}
-	return (size);
+	del(lst->content);
+	free(lst);
 }
-/* 
-int main()
-{
-	t_list *l = NULL;
-	printf("%d\n",ft_lstsize(l));
-	ft_lstadd_front(&l, ft_lstnew((void *)1));
-	printf("%d\n",ft_lstsize(l));
-	ft_lstadd_front(&l, ft_lstnew((void *)2));
-	printf("%d\n",ft_lstsize(l));
-	return (0);
-}
- */
