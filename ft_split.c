@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:38:44 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/07 14:32:39 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:20:53 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static char	**ft_alloc_matrix(char const *s, char c)
 		while (*s != c && *s)
 			s++;
 	}
-	alloc = (char **)malloc((size + 1) * sizeof(char *));
+	alloc = (char **)ft_calloc((size + 1), sizeof(char *));
 	if (alloc == 0)
 		return (0);
 	return (alloc);

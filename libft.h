@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:59:03 by pmoreira          #+#    #+#             */
-/*   Updated: 2024/11/08 15:42:39 by pmoreira         ###   ########.fr       */
+/*   Updated: 2024/11/15 14:19:27 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *)); //ok
 
 void	ft_lstclear(t_list **lst, void (*del)(void *)); //ok
 
-void	ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *)); //ok
 
 #endif
