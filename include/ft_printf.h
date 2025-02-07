@@ -16,17 +16,11 @@
 # include "libft.h"
 
 int		ft_printf(const char *input, ...);
-
 int		ft_putchar(int c);
-
 int		ft_putstr(char *s);
-
 int		ft_printnbr(int n);
-
 int		ft_itoh(unsigned int nbr, char type);
-
 int		ft_printunbr(unsigned int num);
-
 int		ft_printptr(unsigned long ptr);
 
 #endif

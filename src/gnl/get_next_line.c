@@ -6,7 +6,7 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 10:20:42 by pmoreira          #+#    #+#             */
-/*   Updated: 2025/02/06 16:18:04 by pmoreira         ###   ########.fr       */
+/*   Updated: 2025/02/07 11:29:53 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,30 +20,7 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
 	line = ft_fill_line(buffer, fd);
-	if (ft_str_nl(line) == NULL)
-		return (free(line), NULL);
-	if (line == 0)
-		return (0);
+	if (!line)
+		return (NULL);
 	return (line);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int		fd;
-// 	char	*str;
-// 	char	*src;
-
-// 	str = "";
-// 	src = "file2.txt";
-// 	fd = open(src, O_RDONLY);
-// 	while (str != NULL)
-// 	{
-// 		str = get_next_line(fd);
-// 		if (str != NULL)
-// 			printf("%s", str);
-// 		free(str);
-// 	}
-// 	return (0);
-// }

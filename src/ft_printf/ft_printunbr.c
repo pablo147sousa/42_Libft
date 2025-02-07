@@ -6,15 +6,12 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 12:34:25 by pmoreira          #+#    #+#             */
-/*   Updated: 2025/02/04 14:22:54 by pmoreira         ###   ########.fr       */
+/*   Updated: 2025/02/07 10:54:53 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <limits.h>
-
-int			ft_printunbr(unsigned int n);
-static void	ft_putnbr(unsigned int n);
 
 static void	ft_putnbr(unsigned int n)
 {

@@ -6,15 +6,12 @@
 /*   By: pmoreira <pmoreira@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 11:06:08 by pmoreira          #+#    #+#             */
-/*   Updated: 2025/02/06 10:45:50 by pmoreira         ###   ########.fr       */
+/*   Updated: 2025/02/07 10:41:55 by pmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <limits.h>
-
-// int			ft_itoh(unsigned int nbr, char type);
-// void	ft_printhex(unsigned int nbr, char type);
 
 static void	ft_printhex(unsigned int nbr, char type)
 {
